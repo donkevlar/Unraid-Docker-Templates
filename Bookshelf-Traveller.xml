@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Container version="2">
+<Container version="1">
   <Name>Bookshelf-Traveller</Name>
   <Repository>donkevlar/bookshelf-traveller</Repository>
   <Registry>https://github.com/donkevlar/Bookshelf-Traveller</Registry>
@@ -16,7 +16,7 @@ For the full guide, please visit the bookshelf-traveller repository.</Overview>
   <WebUI/>
   <Beta>True</Beta>
   <TemplateURL/>
-  <Icon>https://donkevlar.github.io/Bookshelf-Traveller/images/circular_bookshelf_traveller_icon.png</Icon>
+  <Icon/>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
