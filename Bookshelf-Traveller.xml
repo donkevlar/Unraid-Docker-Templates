@@ -9,13 +9,14 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/169676-donkevlar-docker-templates/</Support>
   <Project>https://github.com/donkevlar/Bookshelf-Traveller</Project>
-  <Overview>A simple discord bot to allow you to listen to your audio books and manage your audiobookshelf (ABS) server. This requires an AudioBookShelf server token and a discord application token. &#xD;
+  <Overview>A simple discord bot to allow you to listen to your audiobooks and manage your audiobookshelf (ABS) server. This requires an AudioBookShelf server token and a discord application token. &#xD;
 &#xD;
 For the full guide, please visit the bookshelf-traveller repository.</Overview>
   <Category>Tools: MediaServer:Other</Category>
   <WebUI/>
+  <Beta>True</Beta>
   <TemplateURL/>
-  <Icon/>
+  <Icon>https://donkevlar.github.io/Bookshelf-Traveller/images/circular_bookshelf_traveller_icon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
