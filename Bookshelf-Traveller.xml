@@ -2,7 +2,7 @@
 <Container version="1">
   <Name>Bookshelf-Traveller</Name>
   <Repository>donkevlar/bookshelf-traveller</Repository>
-  <Registry>https://github.com/donkevlar/Bookshelf-Traveller</Registry>
+  <Registry>ghcr.io/donkevlar/bookshelf-traveller:master</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
