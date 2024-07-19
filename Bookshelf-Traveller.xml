@@ -30,4 +30,5 @@ For the full guide, please visit the bookshelf-traveller repository.</Overview>
   <Config Name="Owner Only" Target="OWNER_ONLY" Default="True" Mode="" Description="Only the owner will have access to all commands. Disable to allow others to use the bot. " Type="Variable" Display="advanced-hide" Required="false" Mask="false">True</Config>
   <Config Name="Playback Role" Target="PLAYBACK_ROLE" Default="True" Mode="" Description="Playback Role. Can be copied over from discord when developer mode is enabled." Type="Variable" Display="always" Required="true" Mask="false">0</Config>
   <Config Name="Multi-User" Target="MULTI_USER" Default="True" Mode="" Description="Enables multi-user login to ABS server. Disable to allow admin controls. " Type="Variable" Display="advanced-hide" Required="false" Mask="false">True</Config>
+  <Config Name="HTTPS Image URL" Target="OPT_IMAGE_URL" Default="" Mode="" Description="Used if you want to use HTTPS connection to retrieve your images. Note this won't do anything if you are already using it in the primary URL. " Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
 </Container>
