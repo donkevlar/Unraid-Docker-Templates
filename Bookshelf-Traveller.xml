@@ -2,27 +2,39 @@
 <Container version="1.0.1">
   <Name>Bookshelf-Traveller</Name>
   <Repository>donkevlar/bookshelf-traveller</Repository>
-  <Registry>ghcr.io/donkevlar/bookshelf-traveller:master</Registry>
+  <Registry>ghcr.io/donkevlar/bookshelf-traveller</Registry>
+  <Branch>
+      <Tag>master</Tag>
+      <TagDescription>Latest stable release</TagDescription>
+  </Branch>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/169676-donkevlar-docker-templates/</Support>
   <Project>https://github.com/donkevlar/Bookshelf-Traveller</Project>
-  <Overview>A simple discord bot that allows you to listen to your audiobooks and manage your audiobookshelf (ABS) server. This requires an AudioBookShelf server token and a discord application token. &#xD;
+  <Overview>A simple discord bot that allows you to listen to your audiobooks and manage your audiobookshelf (ABS) server.&#xD;
 &#xD;
 For the full guide, please visit the bookshelf-traveller repository.</Overview>
+  <Requires>This requires an audiobookshelf server and a discord application token.</Requires>
   <Category>Tools: MediaServer:Other</Category>
+  <Maintainer>
+        <WebPage>https://github.com/donkevlar</WebPage>
+  </Maintainer>
   <Icon>https://donkevlar.github.io/Bookshelf-Traveller/images/icon_bt_v2.png</Icon>
   <WebUI/>
   <Beta>True</Beta>
   <TemplateURL/>
+  <Changes>
+        ### 2024-07-18
+
+        Initial release
+    </Changes>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
   <DonateText/>
   <DonateLink/>
-  <Requires/>
   <Config Name="Discord Token" Target="DISCORD_TOKEN" Default="" Mode="" Description="Discord application token. " Type="Variable" Display="always" Required="true" Mask="false">INSERT_TOKEN</Config>
   <Config Name="Bookshelf Token" Target="bookshelfToken" Default="" Mode="" Description="ABS Token, generated in the settings page of the user. Accepts all user types, but will have limitations if not admin. " Type="Variable" Display="always" Required="true" Mask="false">INSERT_TOKEN</Config>
   <Config Name="Audiobookshelf URL" Target="bookshelfURL" Default="http://127.0.0.1:13378" Mode="" Description="Audiobookshelf url. ex: http://127.0.0.1:13378" Type="Variable" Display="always" Required="true" Mask="false">http://127.0.0.1:13378</Config>
