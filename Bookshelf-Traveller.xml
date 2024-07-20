@@ -2,11 +2,7 @@
 <Container version="1.0.1">
   <Name>Bookshelf-Traveller</Name>
   <Repository>donkevlar/bookshelf-traveller</Repository>
-  <Registry>ghcr.io/donkevlar/bookshelf-traveller</Registry>
-  <Branch>
-      <Tag>master</Tag>
-      <TagDescription>Latest stable release</TagDescription>
-  </Branch>
+  <Registry>ghcr.io/donkevlar/bookshelf-traveller:master</Registry>
   <Network>host</Network>
   <MyIP/>
   <Shell>sh</Shell>
