@@ -7,7 +7,7 @@
       <Tag>master</Tag>
       <TagDescription>Latest stable release</TagDescription>
   </Branch>
-  <Network>bridge</Network>
+  <Network>host</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
