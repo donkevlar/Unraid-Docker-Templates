@@ -25,7 +25,7 @@ For the full guide, please visit the bookshelf-traveller repository.</Overview>
         ### 2024-08-10
         New Features:
           - HTTPX overhaul, all have been converted to async functions with client sessions.
-          - New book check command added<br>
+          - New book check command added
           - Hot fix applied for recent discord api silent breaking change. (Error 4020)
           - A bunch of other minor fixes and improvements! :)
     </Changes>
