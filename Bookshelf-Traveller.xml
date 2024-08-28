@@ -19,7 +19,7 @@ For the full guide, please visit the bookshelf-traveller repository.</Overview>
   </Maintainer>
   <Icon>https://donkevlar.github.io/Bookshelf-Traveller/images/icon_bt_v2.png</Icon>
   <WebUI/>
-  <Beta>True</Beta>
+  <Beta>False</Beta>
   <TemplateURL/>
   <Changes>
         ### 2024-08-13
