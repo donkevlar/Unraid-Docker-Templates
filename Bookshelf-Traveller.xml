@@ -3,7 +3,7 @@
   <Name>Bookshelf-Traveller</Name>
   <Repository>donkevlar/bookshelf-traveller</Repository>
   <Registry>ghcr.io/donkevlar/bookshelf-traveller:master</Registry>
-  <Network>host</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
