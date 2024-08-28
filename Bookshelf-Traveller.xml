@@ -37,7 +37,7 @@ For the full guide, please visit the bookshelf-traveller repository.</Overview>
   <PostArgs/>
   <CPUset/>
   <DonateText>Like this template? Please consider donating :)</DonateText>
-  <DonateLink></DonateLink>
+  <DonateLink>https://buymeacoffee.com/donkevlar</DonateLink>
   <Config Name="Discord Token" Target="DISCORD_TOKEN" Default="" Mode="" Description="Discord application token. " Type="Variable" Display="always" Required="true" Mask="false">INSERT_TOKEN</Config>
   <Config Name="Bookshelf Token" Target="bookshelfToken" Default="" Mode="" Description="ABS Token, generated in the settings page of the user. Accepts all user types, but will have limitations if not admin. " Type="Variable" Display="always" Required="true" Mask="false">INSERT_TOKEN</Config>
   <Config Name="Audiobookshelf URL" Target="bookshelfURL" Default="http://127.0.0.1:13378" Mode="" Description="Audiobookshelf url. ex: http://127.0.0.1:13378" Type="Variable" Display="always" Required="true" Mask="false">http://127.0.0.1:13378</Config>
