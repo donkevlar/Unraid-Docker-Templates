@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Container version="1.0.3">
+<Container version="2">
   <Name>Bookshelf-Traveller</Name>
   <Repository>donkevlar/bookshelf-traveller</Repository>
   <Registry>ghcr.io/donkevlar/bookshelf-traveller:master</Registry>
