@@ -25,12 +25,6 @@ For the full guide, please visit the bookshelf-traveller repository.</Overview>
         2024-08-13 &#xD;
         Breaking Change &#xD;
           - Version 1.2.2 has a new tasks.db structure, you'll need to manually delete or change to a new path. &#xD;
-        2024-08-10 &#xD;
-        New Features: &#xD;
-          - HTTPX overhaul, all have been converted to async functions with client sessions. &#xD;
-          - New book check command added &#xD;
-          - Hot fix applied for recent discord api silent breaking change. (Error 4020) &#xD;
-          - A bunch of other minor fixes and improvements! :) &#xD;
     </Changes>
   <ExtraParams/>
   <PostArgs/>
