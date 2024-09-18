@@ -13,7 +13,7 @@
 &#xD;
 For the full guide, please visit the bookshelf-traveller repository.</Overview>
   <Requires>This requires an audiobookshelf server and a discord application token.</Requires>
-  <Category>Tools: MediaServer:Other</Category>
+  <Category>MediaApp:Other,Tools: Utilities</Category>
   <Maintainer>
         <WebPage>https://github.com/donkevlar</WebPage>
   </Maintainer>
