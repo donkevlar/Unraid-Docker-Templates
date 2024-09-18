@@ -13,7 +13,7 @@
 &#xD;
 For the full guide, please visit the bookshelf-traveller repository.</Overview>
   <Requires>This requires an audiobookshelf server and a discord application token.</Requires>
-  <Category>MediaApp:Other,Tools: Utilities</Category>
+  <Category>MediaApp:Other</Category>
   <Maintainer>
         <WebPage>https://github.com/donkevlar</WebPage>
   </Maintainer>
@@ -22,9 +22,9 @@ For the full guide, please visit the bookshelf-traveller repository.</Overview>
   <Beta>False</Beta>
   <TemplateURL/>
   <Changes>
-        2024-08-13 &#xD;
-        Breaking Change &#xD;
-          - Version 1.2.2 has a new tasks.db structure, you'll need to manually delete or change to a new path. &#xD;
+        2024-08-13\n
+        Breaking Change\n
+          - Version 1.2.2 has a new tasks.db structure, you'll need to manually delete or change to a new path.\n
     </Changes>
   <ExtraParams/>
   <PostArgs/>
