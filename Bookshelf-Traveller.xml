@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Container version="2">
+<Container version="3">
   <Name>Bookshelf-Traveller</Name>
   <Repository>donkevlar/bookshelf-traveller:latest</Repository>
   <Registry>https://github.com/donkevlar/Bookshelf-Traveller</Registry>
@@ -32,6 +32,7 @@ For the full guide, please visit the bookshelf-traveller repository.</Overview>
   <DonateText>Like this template? Please consider donating :)</DonateText>
   <DonateLink>https://buymeacoffee.com/donkevlar</DonateLink>
   <Config Name="Discord Token" Target="DISCORD_TOKEN" Default="" Mode="" Description="Discord application token. " Type="Variable" Display="always" Required="true" Mask="false">INSERT_TOKEN</Config>
+  <Config Name="Client ID" Target="CLIENT_ID" Default="" Mode="" Description="Discord application client ID. This can be found under the 'OAuth2' tab in the discord dev portal." Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Bookshelf Token" Target="bookshelfToken" Default="" Mode="" Description="ABS Token, generated in the settings page of the user. Accepts all user types, but will have limitations if not admin. " Type="Variable" Display="always" Required="true" Mask="false">INSERT_TOKEN</Config>
   <Config Name="Audiobookshelf URL" Target="bookshelfURL" Default="http://127.0.0.1:13378" Mode="" Description="Audiobookshelf url. ex: http://127.0.0.1:13378" Type="Variable" Display="always" Required="true" Mask="false">http://127.0.0.1:13378</Config>
   <Config Name="Persistant DB" Target="/ABSBOT/db" Default="/mnt/user/appdata/bookshelf_traveller/db" Mode="rw" Description="Path for db(s) to stay persistant. Delete if you want the docker to re-initialize the dbs everytime it starts up." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/bookshelf_traveller/db</Config>
