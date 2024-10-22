@@ -22,9 +22,9 @@ For the full guide, please visit the bookshelf-traveller repository.</Overview>
   <Beta>False</Beta>
   <TemplateURL/>
   <Changes>
-        2024-08-13\n
-        Breaking Change\n
-          - Version 1.2.2 has a new tasks.db structure, you'll need to manually delete or change to a new path.\n
+      2024-08-13  
+      Breaking Change  
+        - Version 1.2.2 has a new tasks.db structure, you'll need to manually delete or change to a new path.  
     </Changes>
   <ExtraParams/>
   <PostArgs/>
