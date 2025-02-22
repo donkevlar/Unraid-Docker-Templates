@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>KOReaderPyLink</Name>
+  <Repository>ghcr.io/donkevlar/koreaderpylink:main</Repository>
+  <Registry>https://github.com/donkevlar/KOReaderPyLink</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>This is a simple implementation of the KOReader (https://github.com/koreader/koreader) position sync server for self-hosting at home which has docker support. This is a modified fork of b1n4ryj4n/koreader-sync with some additional logging and slightly modified endpoints.</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://donkevlar.github.io/KOReaderPyLink/icon/pylink.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1740242800</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="API Port" Target="8081" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8081</Config>
+  <Config Name="DB Path" Target="/app/data" Default="" Mode="rw" Description="Remove this path if you don't want a persistant db." Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/koreaderpylink/db</Config>
+  <Config Name="RECEIVE_RANDOM_DEVICE_ID" Target="RECEIVE_RANDOM_DEVICE_ID" Default="False" Mode="" Description="Set it true to retrieve always a random device id to force a progress sync. &#13;&#10;This is usefull if you only sync your progress from one device and &#13;&#10;usually delete the *.sdr files with some cleaning tools." Type="Variable" Display="always" Required="false" Mask="false">False</Config>
+  <Config Name="OPEN_REGISTRATIONS" Target="OPEN_REGISTRATIONS" Default="True" Mode="" Description="Enable/disable new registrations to the server. Useful if you want to run a private server for a few users, although it doesn't necessarily improve security by itself.&#13;&#10;Set to True (enabled) by default." Type="Variable" Display="always" Required="false" Mask="false">True</Config>
+  <TailscaleStateDir/>
+</Container>
