@@ -7,10 +7,13 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support/>
-  <Project/>
+  <Support>https://forums.unraid.net/topic/169676-donkevlar-docker-templates/</Support>
+  <Project>https://github.com/donkevlar/KOReaderPyLink</Project>
   <Overview>This is a simple implementation of the KOReader (https://github.com/koreader/koreader) position sync server for self-hosting at home which has docker support. This is a modified fork of b1n4ryj4n/koreader-sync with some additional logging and slightly modified endpoints.</Overview>
   <Category/>
+  <Maintainer>
+        <WebPage>https://github.com/donkevlar</WebPage>
+  </Maintainer>
   <WebUI/>
   <TemplateURL/>
   <Icon>https://donkevlar.github.io/KOReaderPyLink/icon/pylink.png</Icon>
@@ -18,8 +21,8 @@
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1740242800</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
+  <DonateText>Like this template? Please consider donating :)</DonateText>
+  <DonateLink>https://buymeacoffee.com/donkevlar</DonateLink>
   <Requires/>
   <Config Name="API Port" Target="8081" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8081</Config>
   <Config Name="DB Path" Target="/app/data" Default="" Mode="rw" Description="Remove this path if you don't want a persistant db." Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/koreaderpylink/db</Config>
