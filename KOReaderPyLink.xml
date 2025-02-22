@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Container version="2">
+<Container version="1">
   <Name>KOReaderPyLink</Name>
   <Repository>ghcr.io/donkevlar/koreaderpylink:main</Repository>
   <Registry>https://github.com/donkevlar/KOReaderPyLink</Registry>
