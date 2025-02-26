@@ -23,7 +23,7 @@
   <DateInstalled>1740242800</DateInstalled>
   <DonateText>Like this template? Please consider donating :)</DonateText>
   <DonateLink>https://buymeacoffee.com/donkevlar</DonateLink>
-  <Requires>KOReader Application on a dedicated device. (https://github.com/koreader/koreader)<Requires/>
+  <Requires>KOReader Application on a dedicated device. (https://github.com/koreader/koreader)</Requires>
   <Config Name="API Port" Target="8081" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8081</Config>
   <Config Name="DB Path" Target="/app/data" Default="" Mode="rw" Description="Remove this path if you don't want a persistant db." Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/koreaderpylink/db</Config>
   <Config Name="RECEIVE_RANDOM_DEVICE_ID" Target="RECEIVE_RANDOM_DEVICE_ID" Default="False" Mode="" Description="Set it true to retrieve always a random device id to force a progress sync. &#13;&#10;This is usefull if you only sync your progress from one device and &#13;&#10;usually delete the *.sdr files with some cleaning tools." Type="Variable" Display="always" Required="false" Mask="false">False</Config>
