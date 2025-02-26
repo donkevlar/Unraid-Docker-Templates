@@ -10,7 +10,6 @@
   <Support>https://forums.unraid.net/topic/169676-donkevlar-docker-templates/</Support>
   <Project>https://github.com/donkevlar/KOReaderPyLink</Project>
   <Overview>A simple implementation of the KOReader position sync server for self-hosting at home. This is a modified fork of b1n4ryj4n/koreader-sync with some additional logging and slightly modified endpoints.</Overview>
-  <Category>MediaApp:Other</Category>
   <Category>MediaServer:Book</Category>
   <Maintainer>
         <WebPage>https://github.com/donkevlar</WebPage>
