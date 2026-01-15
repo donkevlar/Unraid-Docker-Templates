@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="1">
   <Name>Hytale-Server</Name>
-  <Repository>indifferentbroccoli/hytale-server-docker:latest</Repository>
+  <Repository>donkevlar/hytale-server-docker:main</Repository>
   <Registry>https://github.com/donkevlar/hytale-server-docker</Registry>
   <Network>bridge</Network>
   <MyIP/>
@@ -32,6 +32,7 @@ For the full guide, please visit the original project repository</Overview>
   <Config Name="Server PORT" Target="5520" Default="" Mode="udp" Description="" Type="Port" Display="always" Required="true" Mask="false">5520</Config>
   <Config Name="SERVER NAME" Target="SERVER_NAME" Default="Hytale Server" Mode="" Description="Server Name " Type="Variable" Display="always" Required="true" Mask="false">Hytale Server</Config>
   <Config Name="MAX PLAYERS" Target="MAX_PLAYERS" Default="20" Mode="" Description="Max number of players in a given server" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Server Directory" Target="/home/hytale/server-files" Default="/mnt/user/appdata/hytale-server/server-files" Mode="" Description="path for storing server data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/hytale-server/server-files</Config>
   <Config Name="DEFAULT_PORT" Target="DEFAULT_PORT" Default="5520" Mode="" Description="Default server port" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
   <Config Name="PUID" Target="PUID" Default="1000" Mode="" Description="User ID for file permissions" Type="Variable" Display="advanced-hide" Required="false" Mask="false">1000</Config>
   <Config Name="PGID" Target="PGID" Default="1000" Mode="" Description="Group ID for file permissions" Type="Variable" Display="advanced-hide" Required="false" Mask="false">1000</Config>
