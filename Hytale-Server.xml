@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="1">
   <Name>Hytale-Server</Name>
-  <Repository>donkevlar/bookshelf-traveller:latest</Repository>
+  <Repository>indifferentbroccoli/hytale-server-docker:latest</Repository>
   <Registry>https://github.com/donkevlar/hytale-server-docker</Registry>
   <Network>bridge</Network>
   <MyIP/>
