@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/indifferentbroccoli/hytale-server-docker/issues</Support>
+  <Support>https://forums.unraid.net/topic/169676-donkevlar-docker-templates/</Support>
   <Project>https://github.com/indifferentbroccoli/hytale-server-docker</Project>
   <Overview>A Docker container for running a Hytale dedicated server with automatic downloading and updates using the official Hytale Downloader CLI. Originally forked from indifferentbroccoli&#xD;
 &#xD;
