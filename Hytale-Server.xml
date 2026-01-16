@@ -35,20 +35,8 @@ Note: If you are having issues with the backup path, please remove it as the var
   <Config Name="SERVER NAME" Target="SERVER_NAME" Default="Hytale Server" Mode="" Description="Server Name " Type="Variable" Display="always" Required="true" Mask="false">Hytale Server</Config>
   <Config Name="MAX PLAYERS" Target="MAX_PLAYERS" Default="20" Mode="" Description="Max number of players in a given server" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Server Directory" Target="/home/hytale/server-files" Default="/mnt/user/appdata/hytale-server/server-files" Mode="" Description="path for storing server data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/hytale-server/server-files</Config>
-  <Config Name="DEFAULT_PORT" Target="DEFAULT_PORT" Default="5520" Mode="" Description="Default server port" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
-  <Config Name="PUID" Target="PUID" Default="1000" Mode="" Description="User ID for file permissions" Type="Variable" Display="advanced-hide" Required="false" Mask="false">1000</Config>
-  <Config Name="PGID" Target="PGID" Default="1000" Mode="" Description="Group ID for file permissions" Type="Variable" Display="advanced-hide" Required="false" Mask="false">1000</Config>
-  <Config Name="View Distance" Target="VIEW_DISTANCE" Default="12" Mode="" Description="View distance in chunks (12 chunks = 384 blocks). Higher values require more RAM" Type="Variable" Display="advanced-hide" Required="false" Mask="false">12</Config>
-  <Config Name="Authentication Mode" Target="AUTH_MODE" Default="authenticated" Mode="" Description="Authentication mode: authenticated or offline" Type="Variable" Display="advanced-hide" Required="false" Mask="false">authenticated</Config>
-  <Config Name="Enable Backups" Target="ENABLE_BACKUPS" Default="false" Mode="" Description="Enable automatic world backups" Type="Variable" Display="advanced-hide" Required="false" Mask="false">false</Config>
-  <Config Name="Backup Frequency" Target="BACKUP_FREQUENCY" Default="30" Mode="" Description="Backup interval in minutes (if backups are enabled)" Type="Variable" Display="advanced-hide" Required="false" Mask="false">30</Config>
-  <Config Name="Backup Directory" Target="/home/hytale/server-files/backups" Default="/mnt/user/appdata/hytale-server/backups" Mode="" Description="Directory path for storing backups" Type="Path" Display="advanced-hide" Required="false" Mask="false">/mnt/user/appdata/hytale-server/backups</Config>
-  <Config Name="Disable Sentry" Target="DISABLE_SENTRY" Default="true" Mode="" Description="Disable Sentry crash reporting" Type="Variable" Display="advanced-hide" Required="false" Mask="false">true</Config>
-  <Config Name="Use AOT Cache" Target="USE_AOT_CACHE" Default="true" Mode="" Description="Use Ahead-of-Time compilation cache for faster startup" Type="Variable" Display="advanced-hide" Required="false" Mask="false">true</Config>
-  <Config Name="Accept Early Plugins" Target="ACCEPT_EARLY_PLUGINS" Default="false" Mode="" Description="Allow early plugins (may cause stability issues)" Type="Variable" Display="advanced-hide" Required="false" Mask="false">false</Config>
-  <Config Name="Min Memory" Target="MIN_MEMORY" Default="" Mode="" Description="Minimum JVM heap size (e.g., 4G). Leave unset to omit -Xms flag" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
   <Config Name="Max Memory" Target="MAX_MEMORY" Default="8G" Mode="" Description="Maximum JVM heap size (e.g., 8G, 8192M)" Type="Variable" Display="advanced-hide" Required="false" Mask="false">8G</Config>
   <Config Name="JVM Arguments" Target="JVM_ARGS" Default="" Mode="" Description="Custom JVM arguments (optional)" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
-  <Config Name="Download on Start" Target="DOWNLOAD_ON_START" Default="true" Mode="" Description="Automatically download/update server files on startup" Type="Variable" Display="advanced-hide" Required="false" Mask="false">true</Config>
+  <Config Name="Download on Start" Target="DOWNLOAD_ON_START" Default="true" Mode="" Description="Automatically download/update server files on startup" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   
 </Container>
