@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Container version="2.1">
+<Container version="3">
   <Name>Hytale-Server</Name>
   <Repository>donkevlar/hytale-server-docker:main</Repository>
   <Registry>https://github.com/donkevlar/hytale-server-docker</Registry>
