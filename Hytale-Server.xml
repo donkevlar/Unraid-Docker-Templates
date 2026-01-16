@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Container version="1">
+<Container version="2">
   <Name>Hytale-Server</Name>
   <Repository>donkevlar/hytale-server-docker:main</Repository>
   <Registry>https://github.com/donkevlar/hytale-server-docker</Registry>
@@ -40,7 +40,7 @@ For the full guide, please visit the original project repository</Overview>
   <Config Name="Authentication Mode" Target="AUTH_MODE" Default="authenticated" Mode="" Description="Authentication mode: authenticated or offline" Type="Variable" Display="advanced-hide" Required="false" Mask="false">authenticated</Config>
   <Config Name="Enable Backups" Target="ENABLE_BACKUPS" Default="false" Mode="" Description="Enable automatic world backups" Type="Variable" Display="advanced-hide" Required="false" Mask="false">false</Config>
   <Config Name="Backup Frequency" Target="BACKUP_FREQUENCY" Default="30" Mode="" Description="Backup interval in minutes (if backups are enabled)" Type="Variable" Display="advanced-hide" Required="false" Mask="false">30</Config>
-  <Config Name="Backup Directory" Target="BACKUP_DIR" Default="/home/hytale/server-files/backups" Mode="" Description="Directory path for storing backups" Type="Path" Display="advanced-hide" Required="false" Mask="false">/home/hytale/server-files/backups</Config>
+  <Config Name="Backup Directory" Target="/home/hytale/server-files/backups" Default="/mnt/user/appdata/hytale-server/backups" Mode="" Description="Directory path for storing backups" Type="Path" Display="advanced-hide" Required="false" Mask="false">/home/hytale/server-files/backups</Config>
   <Config Name="Disable Sentry" Target="DISABLE_SENTRY" Default="true" Mode="" Description="Disable Sentry crash reporting" Type="Variable" Display="advanced-hide" Required="false" Mask="false">true</Config>
   <Config Name="Use AOT Cache" Target="USE_AOT_CACHE" Default="true" Mode="" Description="Use Ahead-of-Time compilation cache for faster startup" Type="Variable" Display="advanced-hide" Required="false" Mask="false">true</Config>
   <Config Name="Accept Early Plugins" Target="ACCEPT_EARLY_PLUGINS" Default="false" Mode="" Description="Allow early plugins (may cause stability issues)" Type="Variable" Display="advanced-hide" Required="false" Mask="false">false</Config>
