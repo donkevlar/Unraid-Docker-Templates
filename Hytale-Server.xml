@@ -12,7 +12,7 @@
   <Overview>A Docker container for running a Hytale dedicated server with automatic downloading and updates using the official Hytale Downloader CLI. Originally forked from indifferentbroccoli.&#xD;
 &#xD;
 For the full guide, please visit the original project repository&#xD;
-Note: If you are having issues with the backup path, please remove it as the variable was included in a pre-released xml with a placeholder. The newest version of the template has the correct path.&#xD; 
+Note: If you are having issues with initially connecting to the server, please ensure AOT_CACHE is set to false. The newest version of the template has made this the default behaviour.&#xD; 
 </Overview>
   <Category>GameServers</Category>
   
