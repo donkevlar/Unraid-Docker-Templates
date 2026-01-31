@@ -38,5 +38,6 @@ Note: If you are having issues with the backup path, please remove it as the var
   <Config Name="Max Memory" Target="MAX_MEMORY" Default="8G" Mode="" Description="Maximum JVM heap size (e.g., 8G, 8192M)" Type="Variable" Display="advanced-hide" Required="false" Mask="false">8G</Config>
   <Config Name="JVM Arguments" Target="JVM_ARGS" Default="" Mode="" Description="Custom JVM arguments (optional)" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
   <Config Name="Download on Start" Target="DOWNLOAD_ON_START" Default="true" Mode="" Description="Automatically download/update server files on startup" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="AOT Cache" Target="USE_AOT_CACHE" Default="false" Mode="" Description="Use Ahead-of-Time compilation cache for faster startup" Type="Variable" Display="advanced-hide" Required="false" Mask="false">false</Config>
   
 </Container>
