@@ -1,3 +1,6 @@
+Here is the updated XML template with the summary added to the `<Changes>` block:
+
+```xml
 <?xml version="1.0"?>
 <Container version="3">
   <Name>Bookshelf-Traveller</Name>
@@ -24,9 +27,13 @@ For the full guide, please visit the bookshelf-traveller repository.</Overview>
   <Beta>False</Beta>
   <TemplateURL/>
   <Changes>
-      2024-08-13  
-      Breaking Change  
-        - Version 1.2.2 has a new tasks.db structure, you'll need to manually delete or change to a new path.  
+### 2026-08-18
+- Added WebUI Management Dashboard support (Port 12359) with WebUI button link.
+- Added missing environment variables: TIMEZONE, WEBUI_ENABLED, BOT_ENABLED, EPHEMERAL_OUTPUT, TASK_FREQUENCY, UPDATES, FFMPEG_DEBUG, EXPERIMENTAL, INITIALIZED_MSG, and DEFAULT_SERVER_NAME.
+- Removed duplicate AUDIO_ENABLED variable entry and fixed typo in persistent database path description.
+
+### 2024-08-13
+- Breaking Change: Version 1.2.2 has a new tasks.db structure, you will need to manually delete or change to a new path.
   </Changes>
   <ExtraParams/>
   <PostArgs/>
@@ -73,3 +80,4 @@ For the full guide, please visit the bookshelf-traveller repository.</Overview>
   <Config Name="Debug Mode" Target="DEBUG_MODE" Default="False" Mode="" Description="Enables verbose debugging logs and suppresses user notifications." Type="Variable" Display="advanced-hide" Required="false" Mask="false">False</Config>
   <Config Name="FFmpeg Debug Logging" Target="FFMPEG_DEBUG" Default="False" Mode="" Description="Creates verbose FFmpeg log files inside the db directory." Type="Variable" Display="advanced-hide" Required="false" Mask="false">False</Config>
 </Container>
+```
