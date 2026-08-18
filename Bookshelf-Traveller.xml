@@ -11,37 +11,65 @@
   <Project>https://github.com/donkevlar/Bookshelf-Traveller</Project>
   <Overview>A simple discord bot that allows you to listen to your audiobooks and manage your audiobookshelf (ABS) server.&#xD;
 &#xD;
+Includes a built-in FastAPI Web Management Interface for easy configuration and status monitoring.&#xD;
+&#xD;
 For the full guide, please visit the bookshelf-traveller repository.</Overview>
   <Requires>This requires an audiobookshelf server and a discord application token.</Requires>
   <Category>MediaApp:Other</Category>
   <Maintainer>
-        <WebPage>https://github.com/donkevlar</WebPage>
+    <WebPage>https://github.com/donkevlar</WebPage>
   </Maintainer>
   <Icon>https://donkevlar.github.io/Bookshelf-Traveller/images/icon_bt_v2.png</Icon>
-  <WebUI/>
+  <WebUI>http://[IP]:[PORT:12359]/</WebUI>
   <Beta>False</Beta>
   <TemplateURL/>
   <Changes>
       2024-08-13  
       Breaking Change  
         - Version 1.2.2 has a new tasks.db structure, you'll need to manually delete or change to a new path.  
-    </Changes>
+  </Changes>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
   <DonateText>Like this template? Please consider donating :)</DonateText>
   <DonateLink>https://buymeacoffee.com/donkevlar</DonateLink>
-  <Config Name="Discord Token" Target="DISCORD_TOKEN" Default="" Mode="" Description="Discord application token. " Type="Variable" Display="always" Required="true" Mask="false">INSERT_TOKEN</Config>
-  <Config Name="Client ID" Target="CLIENT_ID" Default="" Mode="" Description="Discord application client ID. This can be found under the 'OAuth2' tab in the discord dev portal." Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="Bookshelf Token" Target="bookshelfToken" Default="" Mode="" Description="ABS Token, generated in the settings page of the user. Accepts all user types, but will have limitations if not admin. " Type="Variable" Display="always" Required="true" Mask="false">INSERT_TOKEN</Config>
-  <Config Name="Audiobookshelf URL" Target="bookshelfURL" Default="http://127.0.0.1:13378" Mode="" Description="Audiobookshelf url. ex: http://127.0.0.1:13378" Type="Variable" Display="always" Required="true" Mask="false">http://127.0.0.1:13378</Config>
-  <Config Name="Persistant DB" Target="/ABSBOT/db" Default="/mnt/user/appdata/bookshelf_traveller/db" Mode="rw" Description="Path for db(s) to stay persistant. Delete if you want the docker to re-initialize the dbs everytime it starts up." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/bookshelf_traveller/db</Config>
-  <Config Name="Owner Only" Target="OWNER_ONLY" Default="True" Mode="" Description="Only the owner will have access to all commands. Disable to allow others to use the bot. " Type="Variable" Display="advanced-hide" Required="false" Mask="false">True</Config>
-  <Config Name="Enable Audio Playback" Target="AUDIO_ENABLED" Default="True" Mode="" Description="By default is true, enables the audio module. If disabled, it will remove the ability for audio playback." Type="Variable" Display="advanced-hide" Required="false" Mask="false">True</Config>
-  <Config Name="Default Search Provider" Target="DEFAULT_PROVIDER" Default="audible" Mode="" Description="Default search provider for titles. Please refer to ABS API wiki page for full list. EXPERIMENTAL AND OPTIONAL" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
-  <Config Name="Enable Audio Playback" Target="AUDIO_ENABLED" Default="True" Mode="" Description="By default is true, enables the audio module. If disabled, it will remove the ability for audio playback." Type="Variable" Display="advanced-hide" Required="false" Mask="false">True</Config>
-  <Config Name="Playback Role" Target="PLAYBACK_ROLE" Default="True" Mode="" Description="Playback Role. Can be copied over from discord when developer mode is enabled." Type="Variable" Display="advanced-hide" Required="false" Mask="false">0</Config>
-  <Config Name="Multi-User" Target="MULTI_USER" Default="True" Mode="" Description="Enables multi-user login to ABS server. Disable to allow admin controls. " Type="Variable" Display="advanced-hide" Required="false" Mask="false">True</Config>
-  <Config Name="HTTPS Image URL" Target="OPT_IMAGE_URL" Default="" Mode="" Description="Used if you want to use HTTPS connection to retrieve your images. Note this won't do anything if you are already using it in the primary URL. " Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Debug Mode" Target="DEBUG_MODE" Default="False" Mode="" Description="Will make log verbose and show all internal library logs as well." Type="Variable" Display="advanced-hide" Required="false" Mask="false">False</Config>
+
+  <!-- WebUI Port -->
+  <Config Name="WebUI Port" Target="12359" Default="12359" Mode="tcp" Description="Web UI port for the management interface." Type="Port" Display="always" Required="false" Mask="false">12359</Config>
+
+  <!-- Persistent Storage -->
+  <Config Name="Persistent DB" Target="/ABSBOT/db" Default="/mnt/user/appdata/bookshelf_traveller/db" Mode="rw" Description="Path for database files to stay persistent across container updates. Delete if you want the container to re-initialize databases on startup." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/bookshelf_traveller/db</Config>
+
+  <!-- Core Required Settings -->
+  <Config Name="Discord Token" Target="DISCORD_TOKEN" Default="" Mode="" Description="Discord application bot token from the Discord Developer Portal." Type="Variable" Display="always" Required="true" Mask="true">INSERT_TOKEN</Config>
+  <Config Name="Client ID" Target="CLIENT_ID" Default="" Mode="" Description="Discord application client ID from the OAuth2 tab in the Discord Dev Portal (used to generate invite links)." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Bookshelf Token" Target="bookshelfToken" Default="" Mode="" Description="Audiobookshelf API token generated in user settings." Type="Variable" Display="always" Required="true" Mask="true">INSERT_TOKEN</Config>
+  <Config Name="Audiobookshelf URL" Target="bookshelfURL" Default="http://127.0.0.1:13378" Mode="" Description="Audiobookshelf server URL with protocol and port. Example: http://192.168.1.100:13378" Type="Variable" Display="always" Required="true" Mask="false">http://127.0.0.1:13378</Config>
+  <Config Name="HTTPS Image URL" Target="OPT_IMAGE_URL" Default="" Mode="" Description="Optional HTTPS URL for fetching cover images when your primary ABS server URL is direct HTTP." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Timezone" Target="TIMEZONE" Default="America/Toronto" Mode="" Description="Timezone for timestamps (e.g., America/Toronto, America/New_York, Europe/London)." Type="Variable" Display="always" Required="false" Mask="false">America/Toronto</Config>
+
+  <!-- Bot & UI Services -->
+  <Config Name="Enable Web UI" Target="WEBUI_ENABLED" Default="true" Mode="" Description="Enable or disable the FastAPI Web Management Interface." Type="Variable" Display="advanced-hide" Required="false" Mask="false">true</Config>
+  <Config Name="Enable Bot" Target="BOT_ENABLED" Default="true" Mode="" Description="Enable or disable the Discord bot process." Type="Variable" Display="advanced-hide" Required="false" Mask="false">true</Config>
+
+  <!-- Permissions & Roles -->
+  <Config Name="Owner Only" Target="OWNER_ONLY" Default="True" Mode="" Description="If True, only the bot owner (or users with Playback Role) can execute commands." Type="Variable" Display="advanced-hide" Required="false" Mask="false">True</Config>
+  <Config Name="Playback Role" Target="PLAYBACK_ROLE" Default="0" Mode="" Description="Discord Role ID for non-owners allowed to use audio playback commands. Set to 0 to disable." Type="Variable" Display="advanced-hide" Required="false" Mask="false">0</Config>
+  <Config Name="Multi-User" Target="MULTI_USER" Default="True" Mode="" Description="Enables multi-user login to the ABS server. Disable to restrict to admin." Type="Variable" Display="advanced-hide" Required="false" Mask="false">True</Config>
+
+  <!-- Audio & Playback Options -->
+  <Config Name="Enable Audio Playback" Target="AUDIO_ENABLED" Default="True" Mode="" Description="Enables the voice channel audio streaming module." Type="Variable" Display="advanced-hide" Required="false" Mask="false">True</Config>
+  <Config Name="Default Search Provider" Target="DEFAULT_PROVIDER" Default="audible" Mode="" Description="Default search provider for wishlist queries (options: audible, openlibrary, google, itunes, etc.)." Type="Variable" Display="advanced-hide" Required="false" Mask="false">audible</Config>
+  <Config Name="Ephemeral Output" Target="EPHEMERAL_OUTPUT" Default="True" Mode="" Description="Sets slash command responses to be ephemeral (visible only to the user who triggered it)." Type="Variable" Display="advanced-hide" Required="false" Mask="false">True</Config>
+  <Config Name="Default Server Name" Target="DEFAULT_SERVER_NAME" Default="Audiobookshelf" Mode="" Description="Custom server display name used in notifications." Type="Variable" Display="advanced-hide" Required="false" Mask="false">Audiobookshelf</Config>
+
+  <!-- Tasks & Intervals -->
+  <Config Name="Task Frequency (Minutes)" Target="TASK_FREQUENCY" Default="5" Mode="" Description="Interval in minutes for background subscription tasks (new books, finished books)." Type="Variable" Display="advanced-hide" Required="false" Mask="false">5</Config>
+  <Config Name="Playback Update Interval (Seconds)" Target="UPDATES" Default="5" Mode="" Description="Playback session progress sync interval in seconds." Type="Variable" Display="advanced-hide" Required="false" Mask="false">5</Config>
+
+  <!-- Diagnostics & Notifications -->
+  <Config Name="Startup Owner Notification" Target="INITIALIZED_MSG" Default="True" Mode="" Description="Send a startup DM notification to the bot owner." Type="Variable" Display="advanced-hide" Required="false" Mask="false">True</Config>
+  <Config Name="Experimental Features" Target="EXPERIMENTAL" Default="False" Mode="" Description="Enable experimental bot commands and features." Type="Variable" Display="advanced-hide" Required="false" Mask="false">False</Config>
+  <Config Name="Debug Mode" Target="DEBUG_MODE" Default="False" Mode="" Description="Enables verbose debugging logs and suppresses user notifications." Type="Variable" Display="advanced-hide" Required="false" Mask="false">False</Config>
+  <Config Name="FFmpeg Debug Logging" Target="FFMPEG_DEBUG" Default="False" Mode="" Description="Creates verbose FFmpeg log files inside the db directory." Type="Variable" Display="advanced-hide" Required="false" Mask="false">False</Config>
 </Container>
