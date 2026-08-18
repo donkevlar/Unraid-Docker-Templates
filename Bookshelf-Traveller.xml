@@ -2,7 +2,7 @@ Here is the updated XML template with the summary added to the `<Changes>` block
 
 ```xml
 <?xml version="1.0"?>
-<Container version="3">
+<Container version="2">
   <Name>Bookshelf-Traveller</Name>
   <Repository>donkevlar/bookshelf-traveller:latest</Repository>
   <Registry>https://github.com/donkevlar/Bookshelf-Traveller</Registry>
