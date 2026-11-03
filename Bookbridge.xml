@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Bookbridge</Name>
+  <Repository>ghcr.io/cporcellijr/bookbridge:latest</Repository>
+  <Registry>https://ghcr.io/cporcellijr/bookbridge</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/cporcellijr/bookbridge</Support>
+  <Project>https://github.com/cporcellijr/bookbridge</Project>
+  <Overview>
+    BookBridge (abs-kosync) - Bridge for ABS, KOSync, Grimmory, BookOrbit, Kavita, CWA, Storyteller, and other services. Configure via the Web UI.
+  </Overview>
+  <Category>MediaApp:Books</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/cporcellijr/bookbridge/main/unraid/Bookbridge.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/walkxh2o/Dashboard-Icons/main/png/bookbridge.png</Icon>
+  <ExtraParams></ExtraParams>
+  <DateInstalled></DateInstalled>
+  <DonateText></DonateText>
+  <DonateLink></DonateLink>
+  <Config Name="WebUI Port" Target="5757" Default="8080" Mode="tcp" Description="Container Port: 5757" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Sync-only Port" Target="5758" Default="5758" Mode="tcp" Description="Optional: expose the sync-only port when using KOSYNC_PORT=5758" Type="Port" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Timezone" Target="TZ" Default="America/New_York" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always" Required="true" Mask="false">America/New_York</Config>
+  <Config Name="Log Level" Target="LOG_LEVEL" Default="INFO" Mode="" Description="Container Variable: LOG_LEVEL" Type="Variable" Display="advanced" Required="false" Mask="false">INFO</Config>
+  <Config Name="KOSYNC_PORT Variable" Target="KOSYNC_PORT" Default="5758" Mode="" Description="Optional: enable split-port mode" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Data Path" Target="/data" Default="/mnt/user/appdata/bookbridge" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/bookbridge</Config>
+  <Config Name="Ebooks Path" Target="/books" Default="" Mode="rw" Description="Container Path: /books" Type="Path" Display="always" Required="true" Mask="false">/path/to/ebooks</Config>
+  <Config Name="Storyteller Library Path" Target="/storyteller_library" Default="" Mode="rw" Description="Optional: local Storyteller fallback/download access" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Storyteller Assets Path" Target="/storyteller/assets" Default="" Mode="rw" Description="Optional: Storyteller transcript ingest" Type="Path" Display="advanced" Required="false" Mask="false"/>
+</Container>
